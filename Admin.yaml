@@ -1,0 +1,84 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#ffffff',
+    visible: true, text: Users Table, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#34bed1',
+    bold: true, underline: false, icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'NQJTWA,POHFNM'}
+- type: DataGrid
+  properties:
+    role: null
+    columns:
+    - {width: '200', title: Email, id: GGYJVC, data_key: email}
+    - {title: Valid_Document, id: UBNGXF, data_key: Valid_Document}
+    - {width: '75', title: Credit, id: MRHIZZ, data_key: Credit}
+    - {width: '75', title: enabled, id: VXIOHR, data_key: enabled}
+    - {title: confirmed_email, id: VBCWPS, data_key: confirmed_email}
+    auto_header: true
+    tooltip: ''
+    border: ''
+    foreground: ''
+    rows_per_page: 10
+    visible: true
+    show_page_controls: true
+    spacing_above: small
+    spacing_below: small
+    background: ''
+  name: data_grid_user
+  layout_properties: {grid_position: 'QRZZWO,MJZLBE'}
+  components:
+  - type: RepeatingPanel
+    properties: {spacing_above: none, spacing_below: none, item_template: RowTemplate3}
+    name: repeating_panel_user
+    layout_properties: {}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_1
+  layout_properties: {grid_position: 'PLTQTR,RBNYVK'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#ffffff',
+    visible: true, text: Message, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#34bed1',
+    bold: true, underline: false, icon: ''}
+  name: label_2
+  layout_properties: {grid_position: 'GYGAYR,HEXQYB'}
+- type: DataGrid
+  properties:
+    role: null
+    columns:
+    - {width: '250', title: From, id: NTNNVG, data_key: ''}
+    - {width: '250', title: To, id: WYZPRS, data_key: ''}
+    - {width: '100', title: Subject, id: NCEMFA, data_key: ''}
+    - {width: '200', title: Content, id: CJUQOK, data_key: ''}
+    - {width: '150', title: When, id: HTMNSK, data_key: ''}
+    - {width: '75', title: Replied, id: SYCFYV, data_key: ''}
+    - {width: '100', title: '', id: FTIJZW, data_key: ''}
+    auto_header: true
+    tooltip: ''
+    border: ''
+    foreground: ''
+    rows_per_page: 20
+    visible: true
+    show_page_controls: true
+    spacing_above: small
+    spacing_below: small
+    background: ''
+  name: data_grid_1
+  layout_properties: {grid_position: 'CALISZ,QPFWVU'}
+  components:
+  - type: RepeatingPanel
+    properties: {spacing_above: none, spacing_below: none, item_template: RowTemplate10}
+    name: repeating_panel_1
+    layout_properties: {}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '#ffffff', visible: true, text: Logout, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#148dd6',
+    bold: true, underline: false, icon: ''}
+  name: button_adLogout
+  layout_properties: {grid_position: 'RVJKFP,IEUDFB'}
+  event_bindings: {click: button_adLogout_click}

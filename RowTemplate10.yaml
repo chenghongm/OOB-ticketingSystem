@@ -1,0 +1,48 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: NTNNVG}
+  data_bindings:
+  - {property: text, code: 'self.item[''from_address'']'}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: WYZPRS}
+  data_bindings:
+  - {property: text, code: 'self.item[''to_address'']'}
+- type: Label
+  properties: {}
+  name: label_3
+  layout_properties: {column: NCEMFA}
+  data_bindings:
+  - {property: text, code: 'self.item[''subject'']'}
+- type: Label
+  properties: {}
+  name: label_4
+  layout_properties: {column: CJUQOK}
+  data_bindings:
+  - {property: text, code: 'self.item[''text'']'}
+- type: Label
+  properties: {}
+  name: label_5
+  layout_properties: {column: HTMNSK}
+  data_bindings:
+  - {property: text, code: 'self.item[''when'']'}
+- type: CheckBox
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, spacing_below: small,
+    italic: false, background: '', bold: false, checked: false, underline: false}
+  name: check_box_1
+  layout_properties: {column: SYCFYV}
+  data_bindings:
+  - {property: checked, code: 'self.item[''replied'']', writeback: true}
+  event_bindings: {change: check_box_1_change}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_1
+  layout_properties: {column: FTIJZW}

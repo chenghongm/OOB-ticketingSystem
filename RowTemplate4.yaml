@@ -1,0 +1,35 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: QCPZFZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''Trip'']'}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '#ffffff', visible: true, text: 'Remove
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '#148dd6', bold: true, underline: false, icon: 'fa:minus'}
+  name: button_1
+  layout_properties: {column: BADBNF}
+  event_bindings: {click: button_1_click}
+- type: CheckBox
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '#ffffff',
+    visible: true, text: Hold, font_size: null, font: '', spacing_above: small, spacing_below: small,
+    italic: false, background: '#148dd6', bold: true, checked: false, underline: false}
+  name: check_box_hold
+  layout_properties: {column: ODKOCX}
+  event_bindings: {change: check_box_hold_change, show: check_box_hold_show}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Amount,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_1
+  layout_properties: {column: GZEXIE}
+  event_bindings: {change: text_box_1_change, pressed_enter: text_box_1_pressed_enter,
+    hide: text_box_1_hide}
+  data_bindings:
+  - {property: text, code: 'self.item[''index'']', writeback: true}

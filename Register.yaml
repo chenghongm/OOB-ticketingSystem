@@ -1,0 +1,253 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"GJGEKB":20,"ISEVTT":20,"XADMUD":20,"WEDJOT":20,"JGLNPJ":40,"VHFQBM":20,"PYABJX":40,"FRBEQP":20,"LINSXI":40,"SGRYAK":20,"MNFRBU":40,"CXJOUL":20,"BSZLEO":40,"JMLCZW":20,"XEYVDQ":40,"EBBKPT":20,"GTHXGH":20,"GUEFFW":40,"RTPMJM":20,"GUIXCN":40}',
+    spacing_below: none, background: ''}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#ffffff',
+    visible: true, text: 'Note: Register an account to book trips', font_size: null,
+    font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+    background: '#34bed1', bold: true, underline: false, icon: ''}
+  name: Note
+  layout_properties: {grid_position: 'DVDBNK,FGWMWM'}
+- type: Button
+  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: '#ffffff',
+    visible: true, text: Query, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '#34bed1', bold: true, underline: false,
+    icon: ''}
+  name: button_1
+  layout_properties: {grid_position: 'DVDBNK,KEDVCX'}
+  event_bindings: {click: button_1_click}
+- type: Label
+  properties: {role: null, align: left, tooltip: required, border: '', foreground: '#4e8492',
+    visible: true, text: User Name*, font_size: null, font: '', spacing_above: small,
+    icon_align: right, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: Use_Name
+  layout_properties: {grid_position: 'EVDLWP,ISEVTT'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: First Name,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: f_name
+  layout_properties: {grid_position: 'EVDLWP,XADMUD'}
+  event_bindings: {pressed_enter: text_box_1_pressed_enter}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Last Name,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: l_name
+  layout_properties: {grid_position: 'EVDLWP,WEDJOT'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#4e8492',
+    visible: true, text: Email*, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: Email
+  layout_properties: {grid_position: 'ZIDBGJ,GJGEKB', full_width_row: false}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Email Address,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: email, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: email
+  layout_properties: {grid_position: 'ZIDBGJ,JGLNPJ', full_width_row: false}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#4e8492',
+    visible: true, text: Password*, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label11
+  layout_properties: {grid_position: 'SBZFTB,GTHXGH'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: Password(at least 6 characters),
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: password
+  layout_properties: {grid_position: 'SBZFTB,GUEFFW'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#4e8492',
+    visible: true, text: Confirm_Password*, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_confirpass
+  layout_properties: {grid_position: 'WFYPMX,RTPMJM'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: Re-typing Password,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_repass
+  layout_properties: {grid_position: 'WFYPMX,GUIXCN'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#4e8492',
+    visible: true, text: Address, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'DMSDXK,VHFQBM'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Line1,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: addressLine1
+  layout_properties: {grid_position: 'DMSDXK,PYABJX'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '  ', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_2
+  layout_properties: {grid_position: 'SWDFVH,FRBEQP'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Line2,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: addressLine2
+  layout_properties: {grid_position: 'SWDFVH,LINSXI'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: ' ', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_3
+  layout_properties: {grid_position: 'IUBYDV,MUTDJS'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: City / District,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: city
+  layout_properties: {grid_position: 'IUBYDV,YMSITW'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: State / Province,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: state
+  layout_properties: {grid_position: 'IUBYDV,BHPJPZ'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: ' ', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_4
+  layout_properties: {grid_position: 'OZPWGU,MMBXXT'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Zip Code,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: zip
+  layout_properties: {grid_position: 'OZPWGU,WSSOAL'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Country,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: country
+  layout_properties: {grid_position: 'OZPWGU,PSVFCO'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#4e8492',
+    visible: true, text: Phone*, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_5
+  layout_properties: {grid_position: 'LNZIZC,SGRYAK'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Phone Number,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: tel, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: phone
+  layout_properties: {grid_position: 'LNZIZC,MNFRBU'}
+  event_bindings: {show: text_box_10_show}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#4e8492',
+    visible: true, text: Valid Document*, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_doc
+  layout_properties: {grid_position: 'VIONGU,CXJOUL'}
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    border: ''
+    enabled: true
+    foreground: ''
+    items: [Citizen ID, Passport, Travel Document, Student Document]
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: ''
+    bold: false
+    underline: false
+  name: docType
+  layout_properties: {grid_position: 'VIONGU,BSZLEO'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#4e8492',
+    visible: true, text: Valid ID Upload*, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_6
+  layout_properties: {grid_position: 'OAADIV,JMLCZW'}
+- type: FileLoader
+  properties:
+    role: null
+    show_state: true
+    align: left
+    tooltip: ''
+    border: ''
+    enabled: true
+    files: []
+    foreground: '#4e8492'
+    visible: true
+    text: Upload
+    font_size: null
+    font: ''
+    spacing_above: small
+    icon_align: left
+    spacing_below: small
+    italic: false
+    file: null
+    background: ''
+    bold: true
+    underline: false
+    multiple: false
+    icon: fa:upload
+  name: file_loader_1
+  layout_properties: {grid_position: 'OAADIV,XEYVDQ'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: ' ', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_10
+  layout_properties: {grid_position: 'OROXFL,EBBKPT'}
+- type: Button
+  properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: '#ffffff',
+    visible: true, text: Register, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#148dd6',
+    bold: true, underline: false, icon: ''}
+  name: CreateAccount
+  layout_properties: {grid_position: 'AOMRPA,AXONNM'}
+  event_bindings: {click: CreateAccount_click}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '#ffffff', visible: true, text: Sign In, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#148dd6',
+    bold: true, underline: false, icon: ''}
+  name: button_2
+  layout_properties: {grid_position: 'DCVIZT,AFMSVH'}
+  event_bindings: {click: button_2_click}

@@ -1,0 +1,37 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: GGYJVC}
+  data_bindings:
+  - {property: text, code: 'self.item[''email'']'}
+- type: FileLoader
+  properties: {}
+  name: file_loader_1
+  layout_properties: {column: UBNGXF}
+  data_bindings:
+  - {property: text, code: 'self.item[''Valid_Document'']'}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: MRHIZZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''Credit'']'}
+- type: CheckBox
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, spacing_below: small,
+    italic: false, background: '', bold: false, checked: false, underline: false}
+  name: check_box_enable
+  layout_properties: {column: VXIOHR}
+  event_bindings: {change: check_box_enable_change}
+  data_bindings:
+  - {property: checked, code: 'self.item[''enabled'']', writeback: true}
+- type: CheckBox
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, spacing_below: small,
+    italic: false, background: '', bold: false, checked: false, underline: false}
+  name: check_box_email
+  layout_properties: {column: VBCWPS}
+  data_bindings:
+  - {property: checked, code: 'self.item[''confirmed_email'']', writeback: true}

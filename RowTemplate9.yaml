@@ -1,0 +1,23 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_p
+  layout_properties: {column: KNZSOF}
+  data_bindings:
+  - {property: text, code: 'self.item[''OrderID'']'}
+- type: Label
+  properties: {}
+  name: label_trip
+  layout_properties: {column: PPCACQ}
+  data_bindings:
+  - {property: text, code: 'self.item[''Trip'']'}
+- type: DropDown
+  properties: {}
+  name: drop_down_1
+  layout_properties: {column: MQISHI}
+  event_bindings: {change: drop_down_1_change}
+- type: Label
+  properties: {}
+  name: label_3
+  layout_properties: {column: VZJVGN}

@@ -1,0 +1,30 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: QQAOGQ}
+  data_bindings:
+  - {property: text, code: 'self.item[''OrderID'']'}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: ICWTPN}
+  data_bindings:
+  - {property: text, code: 'self.item[''Passenger'']'}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '#ffffff', visible: true, text: Print QR, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#5eaeff',
+    bold: true, underline: false, icon: ''}
+  name: button_1
+  layout_properties: {column: EAHCMZ}
+  event_bindings: {click: button_1_click, show: button_1_show}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '#ffffff', visible: true, text: Cancel, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#2492ff',
+    bold: true, underline: false, icon: ''}
+  name: button_2
+  layout_properties: {column: JTOZIB}
+  event_bindings: {click: button_2_click}

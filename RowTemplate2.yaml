@@ -1,0 +1,58 @@
+container:
+  type: DataRowPanel
+  data_bindings: []
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', auto_display_data: true,
+    visible: true, font_size: null, font: '', spacing_above: none, spacing_below: none,
+    italic: false, background: '', bold: false, underline: false}
+  event_bindings: {}
+components:
+- type: Label
+  properties: {}
+  name: label_date
+  layout_properties: {column: QWOGBC}
+  data_bindings:
+  - {property: text, code: 'self.item[''Date'']'}
+- type: Label
+  properties: {}
+  name: label_train
+  layout_properties: {column: QUPEFD}
+  data_bindings:
+  - {property: text, code: 'self.item[''Train'']'}
+- type: Label
+  properties: {}
+  name: label_fstation
+  layout_properties: {column: ZHNQAT}
+  data_bindings:
+  - {property: text, code: 'self.item[''From_Station'']'}
+- type: Label
+  properties: {}
+  name: label_tstation
+  layout_properties: {column: YWNTZO}
+  data_bindings:
+  - {property: text, code: 'self.item[''To_Station'']'}
+- type: Label
+  properties: {}
+  name: label_stime
+  layout_properties: {column: NUVNMA}
+  data_bindings:
+  - {property: text, code: 'self.item[''Start_time'']'}
+- type: Label
+  properties: {}
+  name: label_etime
+  layout_properties: {column: OBCQVA}
+  data_bindings:
+  - {property: text, code: 'self.item[''End_time'']'}
+- type: Label
+  properties: {}
+  name: label_duration
+  layout_properties: {column: KSLPZM}
+  data_bindings:
+  - {property: text, code: 'self.item[''Duration'']'}
+- type: CheckBox
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '',
+    visible: true, text: Add/Remove, font_size: null, font: '', spacing_above: small,
+    spacing_below: small, italic: false, background: '', bold: false, checked: false,
+    underline: false}
+  name: check_box_1
+  layout_properties: {column: LMJDZD}
+  event_bindings: {change: check_box_1_change}

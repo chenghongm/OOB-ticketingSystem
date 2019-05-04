@@ -1,0 +1,228 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '#3e6059', visible: true,
+    wrap_on: tablet, col_spacing: small, spacing_above: small, col_widths: '{"IODJJF":10}',
+    spacing_below: small, background: '#ffffff'}
+  event_bindings: {show: form_show}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#46a3ff',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: 'data:image/png;base64,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'}
+  name: label_loginstatus
+  layout_properties: {grid_position: 'USIYFN,UMXRIV'}
+  event_bindings: {show: label_loginstatus_show}
+- type: Link
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#46a3ff',
+    visible: true, text: User Account, font_size: null, wrap_on: mobile, font: '',
+    col_spacing: small, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: true, underline: false, icon: 'fa:home'}
+  name: link_go2useraccount
+  layout_properties: {grid_position: 'USIYFN,KFCAPE'}
+  event_bindings: {show: link_go2useraccount_show, click: link_go2useraccount_click}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '#ffffff',
+    visible: true, text: Welcome to TicketingCSF, font_size: 30, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '#34bed1',
+    bold: true, underline: false, icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'MCABYS,IZPCDX'}
+- type: RadioButton
+  properties: {role: null, selected: true, align: left, tooltip: '', border: '', enabled: true,
+    foreground: '#386759', value: 'One Way ', visible: true, text: One Way, font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: true, group_name: tripType, underline: false}
+  name: radio_Oneway
+  layout_properties: {grid_position: 'SZUNRC,NYDLGW'}
+  event_bindings: {clicked: oneway_clicked, show: radio_Oneway_show}
+  data_bindings: []
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: Round, visible: true, text: Round, font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: true, group_name: tripType, underline: false}
+  name: radio_Round
+  layout_properties: {grid_position: 'SZUNRC,UYLWYE'}
+  event_bindings: {clicked: radio_Round_clicked}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Departing, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_5
+  layout_properties: {grid_position: 'IVVOWS,IODJJF'}
+- type: DatePicker
+  properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
+    placeholder: '', border: '', enabled: true, foreground: '', visible: true, font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, date: '',
+    min_date: '', background: '', bold: false, underline: false, format: ''}
+  name: startDate
+  layout_properties: {grid_position: 'OWXHBC,RFWXZT'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Returning, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: returnLabel
+  layout_properties: {grid_position: 'QSYMJD,RKAMDI'}
+  event_bindings: {hide: label_6_hide}
+- type: DatePicker
+  properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
+    placeholder: '', border: '', enabled: true, foreground: '', visible: true, font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, min_date: '',
+    background: '', bold: false, underline: false, format: ''}
+  name: returnDate
+  layout_properties: {grid_position: 'UTQEJR,WVAVRY'}
+  event_bindings: {hide: retrunDate_hide}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: From, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_3
+  layout_properties: {grid_position: 'UQQKGU,OTJILB'}
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    border: ''
+    enabled: true
+    foreground: ''
+    items: ['', VAP北京北, BOP北京东, "BJP\t\u5317\u4eac", "VNP\t\u5317\u4eac\u5357", "BXP\t\
+        \u5317\u4eac\u897f", "IZQ\t\u5e7f\u5dde\u5357", CUW重庆北, CQW重庆, CRW重庆南, GGQ广州东,
+      SHH上海, SNH上海南, AOH上海虹桥, "SXH\t\u4e0a\u6d77\u897f", TBP天津北, TJP天津, TIP天津南, "TXP\t\
+        \u5929\u6d25\u897f", "CCT\t\u957f\u6625", "CET\t\u957f\u6625\u5357", "CRT\t\
+        \u957f\u6625\u897f", "ICW\t\u6210\u90fd\u4e1c", CNW成都南, CDW成都, CSQ长沙, CWQ长沙南,
+      FZS福州, FYS福州南, GIW贵阳, GZQ广州, GXQ广州西, "HBB\t\u54c8\u5c14\u6ee8", "VBB\t\u54c8\
+        \u5c14\u6ee8\u4e1c", "VAB\t\u54c8\u5c14\u6ee8\u897f", "HFH\t\u5408\u80a5",
+      NDC呼和浩特东, HHC呼和浩特, HMQ海口东, VUQ海口, HGH杭州东, "HZH\t\u676d\u5dde", XHH杭州南, "JNK\t\
+        \u6d4e\u5357", "JAK\t\u6d4e\u5357\u4e1c", "JGK\t\u6d4e\u5357\u897f", KMM昆明,
+      KXM昆明西, "LSO\t\u62c9\u8428", LVJ兰州东, LZJ兰州, LAJ兰州西, NCG南昌, NJH南京, NKH南京南, "NNZ\t\
+        \u5357\u5b81", VVP石家庄北, SJP石家庄, "SYT\t\u6c88\u9633", "SBT\t\u6c88\u9633\u5317",
+      "SDT\t\u6c88\u9633\u4e1c", "TBV\t\u592a\u539f\u5317", "TDV\t\u592a\u539f\u4e1c",
+      "TYV\t\u592a\u539f", WHN武汉, KNM王家营西, WMR乌鲁木齐, EAY西安北, XAY西安, "CAY\t\u897f\u5b89\
+        \u5357", XXO西宁西, YIJ银川, ZZF郑州, ART阿尔山, AKY安康, "ASR\t\u963f\u514b\u82cf", "AHX\t\
+        \u963f\u91cc\u6cb3", "AKR\t\u963f\u62c9\u5c71\u53e3", APT安平, AQH安庆, ASW安顺,
+      AST鞍山, AYF安阳, "BAB\t\u5317\u5b89", "BBH\t\u868c\u57e0", "BCT\t\u767d\u57ce",
+      "BHZ\t\u5317\u6d77", "BEL\t\u767d\u6cb3", "BAP\t\u767d\u6da7", "BJY\t\u5b9d\u9e21",
+      "BJB\t\u6ee8\u6c5f", "BKX\t\u535a\u514b\u56fe", BIZ百色, HJL白山市, BTT北台, BDC包头东,
+      "BTC\t\u5305\u5934", "BXR\t\u5317\u5c6f\u5e02", "BXT\t\u672c\u6eaa", "BEC\t\u767d\
+        \u4e91\u9102\u535a", "BXJ\t\u767d\u94f6\u897f", "BZH\t\u4eb3\u5dde", CBN赤壁,
+      VGQ常德, CDP承德, "CDT\t\u957f\u7538", "CFD\t\u8d64\u5cf0", CDG茶陵, CEH苍南, "CPP\t\
+        \u660c\u5e73", CRG崇仁, CTT昌图, CDB长汀镇, "CXK\t\u66f9\u53bf", COM楚雄, "CXT\t\u9648\
+        \u76f8\u5c6f", "CBF\t\u957f\u6cbb\u5317", "CZJ\t\u957f\u5f81", "IYH\t\u6c60\
+        \u5dde", "CZH\t\u5e38\u5dde", WKD魏杖子, EAM新安, XAZ兴安, XAF新安县, XAP新保安, EBP板城,
+      XLP西八里, ECH宣城, XCD兴城, '']
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: ''
+    bold: false
+    underline: false
+  name: drop_down_from
+  layout_properties: {grid_position: 'GTCFJU,OWHFLG'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: To, font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: true, underline: false, icon: ''}
+  name: label_4
+  layout_properties: {grid_position: 'UMKRNO,QTODTM'}
+- type: DropDown
+  properties:
+    role: null
+    align: full
+    tooltip: ''
+    border: ''
+    enabled: true
+    foreground: ''
+    items: ['', VAP北京, BOP北京, "BJP\t\u5317\u4eac", "VNP\t\u5317\u4eac", BXP北京, IZQ广州,
+      CUW重庆, CQW重庆, CRW重庆, GGQ广州, SHH上海, SNH上海, AOH上海, SXH上海, "TBP\t\u5929\u6d25",
+      TJP天津, TIP天津, TXP天津, "CCT\t\u957f\u6625", "CET\t\u957f\u6625", "CRT\t\u957f\u6625",
+      "ICW\t\u6210\u90fd", CNW成都, CDW成都, CSQ长沙, CWQ长沙, FZS福州, FYS福州, GIW贵阳, GZQ广州,
+      GXQ广州, "HBB\t\u54c8\u5c14\u6ee8", "VBB\t\u54c8\u5c14\u6ee8", "VAB\t\u54c8\u5c14\
+        \u6ee8", "HFH\t\u5408\u80a5", NDC呼和浩特, HHC呼和浩特, HMQ海口, VUQ海口, HGH杭州, "HZH\t\
+        \u676d\u5dde", XHH杭州, JNK济南, JAK济南, JGK济南, KMM昆明, KXM昆明, LSO拉萨, LVJ兰州, LZJ兰州,
+      LAJ兰州, NCG南昌, NJH南京, NKH南京, "NNZ\t\u5357\u5b81", VVP石家庄, SJP石家庄, "SYT\t\u6c88\
+        \u9633", "SBT\t\u6c88\u9633", "SDT\t\u6c88\u9633", "TBV\t\u592a\u539f", "TDV\t\
+        \u592a\u539f", "TYV\t\u592a\u539f", WHN武汉, KNM昆明, WMR乌鲁木齐, EAY西安, XAY西安, CAY西安,
+      XXO西宁, YIJ银川, ZZF郑州, ART阿尔山, "AKY\t\u5b89\u5eb7", "ASR\t\u963f\u514b\u82cf"]
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: ''
+    bold: false
+    underline: false
+  name: drop_down_to
+  layout_properties: {grid_position: 'VLBGAY,STOJTH'}
+- type: RadioButton
+  properties: {role: null, selected: true, align: left, tooltip: '', border: '', enabled: true,
+    foreground: '', value: '', visible: true, text: Adults(>12), font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: true, group_name: '', underline: false}
+  name: ADULT
+  layout_properties: {grid_position: 'GASMWC,WBJPZY'}
+- type: RadioButton
+  properties: {role: null, selected: false, align: left, tooltip: '', border: '',
+    enabled: true, foreground: '', value: '', visible: true, text: Children(>2), font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: true, group_name: radioGroup1, underline: false}
+  name: CHILDREN
+  layout_properties: {grid_position: 'GGGXFS,AEISOD'}
+- type: Button
+  properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: '#f9f9f9',
+    visible: true, text: Query, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '#2f91d2', bold: true, underline: false,
+    icon: ''}
+  name: button_1
+  layout_properties: {grid_position: 'HCPQZX,VIINRI'}
+  event_bindings: {show: button_1_show, click: button_1_click}
+- type: DataRowPanel
+  properties: {}
+  name: data_row_panel_1
+  layout_properties: {grid_position: 'WDQYJZ,NCJEJT'}
+  components:
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '#ffffff', visible: true, text: Sign Up, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#148dd6', bold: true, underline: false, icon: ''}
+    name: button_signup
+    layout_properties: {grid_position: 'HCPQZX,JTZXVL', column: null}
+    event_bindings: {click: button_signup_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '#ffffff', visible: true, text: Log Out, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#148dd6', bold: true, underline: false, icon: ''}
+    name: button_logout
+    layout_properties: {grid_position: 'GEDWBC,SEUBXU'}
+    event_bindings: {click: button_logout_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '#ffffff', visible: true, text: Sign In, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#148dd6', bold: false, underline: false, icon: ''}
+    name: button_signin
+    layout_properties: {}
+    event_bindings: {click: button_3_click}
+- type: Link
+  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#65a0d1',
+    visible: true, text: Admin Login, font_size: null, wrap_on: tablet, font: '',
+    col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '{}',
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: link_1
+  layout_properties: {grid_position: 'JPGEXC,FSSDJE'}
+  event_bindings: {click: link_1_click}
+  components: []
+custom_component: false
+events: []
+properties: []
