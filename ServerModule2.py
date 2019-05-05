@@ -109,7 +109,16 @@ def refundEmail(to_adr):
                  to=to_adr, 
                  subject="No-Reply",
                  text='You will get partial refund according to your credit, please check your email 3-5 days. \n Thanks being with TicketingCSF ')
-    
+
+@anvil.server.callable
+def sendTicket(media, to_adr):
+    anvil.email.send(from_name="TicketingCSF", 
+                 to=to_adr, 
+                 subject="Ticket",
+                 text='Thank you be with us, enjoy your trip. \n Thanks being with TicketingCSF ',
+                 attachments=media)
+
+   
 
 @anvil.server.callable  
 def passengerItem(userID):

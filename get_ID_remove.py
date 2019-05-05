@@ -45,7 +45,7 @@ def get_userID(userList):
 def gen_orderID(userID):
       
       #userL = list(app_tables.users.search())
-      orderL = list(app_tables.order_tmp.search())
+      orderL = list(app_tables.order_tmp2.search())
      # userID = anvil.server.call('get_userID',userL)
       now  = datetime.datetime.now()
       date = now.strftime("%Y%m%d")
