@@ -35,9 +35,7 @@ class orderhistory(orderhistoryTemplate):
 
   def button_7_click(self, **event_args):
     """This method is called when the button is clicked"""
-    #anvil.server.call('printOrder')
-    #print('print done!')
-    #alert(content=anvil.server.call('readFile'),large=True)
+    
     items = app_tables.order.search()
     #print('call-m')
     m = anvil.server.call('downloadOrder',items)

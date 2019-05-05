@@ -149,12 +149,13 @@ class Query(QueryTemplate):
       self.link_go2useraccount.visible = False
       self.button_signup.visible = True
       self.button_signin.visible = True
+      self.button_logout.visible = False
     else:
       self.label_loginstatus.text = 'Welcome, '+ user['email']
       self.link_go2useraccount.visible = True
       self.button_signup.visible = False
       self.button_signin.visible = False
-    
+      self.button_logout.visible = True
 
 
     
@@ -162,21 +163,21 @@ class Query(QueryTemplate):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     user = anvil.users.get_user()
+    
+    
     if user is not None:
         userE = user['email']
         adminE = app_tables.admins.get(Email=userE)
         if adminE:
           open_form('Admin')
-        else:
+    else:
         
-          d=LoginDialog()
-          choice= alert(d,title='Admin Login',dismissible=True,buttons=[('Login','Login'),('Cancel','Cancel')])
-          if choice =='Login':
-            if LoginDialog().email_box.text == adminE['Email'] and LoginDialog().password_box.text == adminE['Password']:
-                open_form('Admin')
-            elif LoginDialog().email_box.text != adminE['Email'] or LoginDialog().password_box.text != adminE['Password']:
-               alert('Email and Password are not valid!This link only for Admin!')
-               open_form('Query')
+        
+        login_flow.login_with_form()
+        if 1:
+          open_form('Admin')
+       
+        
     
 
   def link_go2useraccount_click(self, **event_args):
@@ -189,6 +190,47 @@ class Query(QueryTemplate):
     anvil.users.logout()
     pagestack.clear()
     open_form('Query')
+
+  def startDate_change(self, **event_args):
+    """This method is called when the selected date changes"""
+    dateStr = str(self.startDate.date)
+    date = dateStr[0:10]
+    date_valid = anvil.server.call('check_date_expired',date)
+    if date_valid is True:
+      alert('Your date is expired!')
+      
+      
+      
+
+  def returnDate_change(self, **event_args):
+    """This method is called when the selected date changes"""
+    dateStr = str(self.startDate.date)
+    dateReStr = str(self.returnDate.date)
+    date = dateStr[0:10]
+    dateRe = dateReStr[0:10]
+        
+    if int(str(self.startDate.date).replace('-',''))> int(str(self.returnDate.date).replace('-','')):
+              alert("Invalid Return date!")
+
+  def link_admin_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    
+    user = anvil.users.get_user()
+    
+    
+    if user is not None and user['email'] == 'mch8418@gmail.com':
+       
+          open_form('Admin')
+    else:
+        
+        d = LoginDialog()
+        choice = alert(d)
+        if 1:
+          if app_tables.admins.get(Email=d.email_box.text) and app_tables.admins.get(Password=d.password_box.text) :
+             open_form('Admin')
+          else:
+             alert('Password and email are invalid.This link is only for Admin')
+
 
   
 

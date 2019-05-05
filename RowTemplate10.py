@@ -28,3 +28,8 @@ class RowTemplate10(RowTemplate10Template):
       #self.text_box_1.enabled = False
       
 
+  def text_box_1_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
+

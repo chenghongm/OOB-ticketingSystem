@@ -340,9 +340,10 @@ components:
   event_bindings: {click: button_update_click}
 - type: Button
   properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-    foreground: '#ffffff', visible: true, text: log Out, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '#2492ff',
-    bold: true, underline: false, icon: ''}
+    foreground: '#ffffff', visible: true, text: 'Log Out
+
+      ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '#2492ff', bold: true, underline: false, icon: ''}
   name: button_7
   layout_properties: {grid_position: 'XGDKLV,HVBITI'}
   event_bindings: {click: button_7_click}

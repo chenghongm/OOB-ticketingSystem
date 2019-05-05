@@ -32,7 +32,8 @@ class userAccount(userAccountTemplate):
     user = anvil.users.get_user()
     
     anvil.users.send_password_reset_email(user['email'])
-
+    alert('Your reset eamil has sent out, please check your email! Thanks!')
+    anvil.users.logout()
   def button_5_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Query')

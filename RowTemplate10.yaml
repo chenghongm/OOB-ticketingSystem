@@ -41,8 +41,9 @@ components:
   event_bindings: {change: check_box_1_change}
 - type: TextBox
   properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-    background: '', bold: false, underline: false}
+    border: '', enabled: true, foreground: '', visible: true, text: ' Thanks for being
+      with TicketingCSF.', font_size: null, font: '', spacing_above: small, type: text,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false}
   name: text_box_1
   layout_properties: {column: FTIJZW}
+  event_bindings: {pressed_enter: text_box_1_pressed_enter}

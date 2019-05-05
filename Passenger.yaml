@@ -15,6 +15,7 @@ components:
     icon: ''}
   name: button_query
   layout_properties: {grid_position: 'HJWDSN,KTQRER'}
+  event_bindings: {click: button_query_click}
 - type: FlowPanel
   properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
     foreground: '', visible: true, spacing_above: small, spacing_below: small, background: '#6ab5b5'}

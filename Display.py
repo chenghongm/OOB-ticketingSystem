@@ -27,17 +27,7 @@ class Display(DisplayTemplate):
     if pagestack.pageL[len(pagestack.pageL)-2]=="Display":
        pagestack.pageL.pop()
     
-    user = anvil.users.get_user()
-    if user is not None:
-      self.label_loginstatus.text = 'Welcome, '+user['email']
-      self.link_go2useraccount.visible = True
-      self.button_signup.visible = False
-      self.button_signin.visible = False
-    else:
-      self.label_loginstatus.text = 'Welcome! Tourist!'
-      self.button_signup.visible = True
-      self.button_signin.visible = True
-      self.link_go2useraccount.visible = False
+    
     
 
   def button_1_click(self, **event_args):
@@ -58,7 +48,7 @@ class Display(DisplayTemplate):
                                 ])
        if choice =='SignIn':
           login_flow.login_with_form()
-          get_open_form().form_show()
+          get_open_form().label_loginstatus_show()
        else:
           open_form('Register')
          
@@ -100,6 +90,7 @@ class Display(DisplayTemplate):
   def button_signin_click(self, **event_args):
     """This method is called when the button is clicked"""
     anvil.users.login_with_form()
+    get_open_form().label_loginstatus_show()
 
   def button_logout_click(self, **event_args):
     """This method is called when the button is clicked"""

@@ -23,3 +23,6 @@ class RowTemplate3(RowTemplate3Template):
       
       to_adr = self.label_1.text
       anvil.server.call('noticeEmail',to_adr)
+
+  
+

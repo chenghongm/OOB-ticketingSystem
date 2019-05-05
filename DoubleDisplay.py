@@ -33,7 +33,7 @@ class DoubleDisplay(DoubleDisplayTemplate):
                                 ])
        if choice =='SignIn':
           login_flow.login_with_form()
-          get_open_form().form_show()
+          get_open_form().label_status_show()
        else:
           open_form('Register')
          
@@ -76,13 +76,23 @@ class DoubleDisplay(DoubleDisplayTemplate):
     """This method is called when the column panel is shown on the screen"""
     pagestack.pageL.append('DoubleDisplay')
     print(pagestack.pageL)
-    if pagestack.pageL[len(pagestack.pageL)-2]=="DOubleDisplay":
+    if pagestack.pageL[len(pagestack.pageL)-2]=="DoubleDisplay":
        pagestack.pageL.pop()
     
+       
+
+  def button_logout_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.users.logout()
+    pagestack.clear()
+    open_form('Query')
+
+  def label_status_show(self, **event_args):
+    """This method is called when the Label is shown on the screen"""
     user = anvil.users.get_user()
     if user is not None:
-      self.label_status.text = 'Welcome, '+user['email']
-      self.link_1.visible = True
+      self.label_loginstatus.text = 'Welcome, '+user['email']
+      self.link_go2useraccount.visible = True
       self.button_signup.visible = False
       self.button_signin.visible = False
     else:
@@ -90,13 +100,7 @@ class DoubleDisplay(DoubleDisplayTemplate):
       self.button_signup.visible = True
       self.button_signin.visible = True
       self.link_1.visible = False
-    
 
-  def button_logout_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    anvil.users.logout()
-    pagestack.clear()
-    open_form('Query')
 
 
 

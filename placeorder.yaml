@@ -1,7 +1,7 @@
 container:
   type: ColumnPanel
   properties: {col_widths: '{}'}
-  event_bindings: {show: form_show}
+  event_bindings: {show: form_show, hide: form_hide}
 components:
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '#4fa7ff',

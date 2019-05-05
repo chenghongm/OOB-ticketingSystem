@@ -77,6 +77,11 @@ class Passenger(PassengerTemplate):
     """This method is called when the button is clicked"""
     open_form('credit')
 
+  def button_query_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Query')
+
+
 
   
 

@@ -42,11 +42,11 @@ class contact(contactTemplate):
     from_adr = user['email']
     subjet = self.drop_down_1.selected_value
     content = self.text_area_1.text
-    date = str(date.today())
-    app_tables.message.add_row(content=content,
+    date_sub = str(date.today())
+    app_tables.message.add_row(text=content,
                                from_address=from_adr,
                                subject=subjet,
-                               when=date,
+                               when=date_sub,
                                supporting_doc=self.file_loader_1.file)
     alert('Thank you, we will come back to you shortly!')
 

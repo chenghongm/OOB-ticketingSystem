@@ -28,10 +28,11 @@ components:
   data_bindings:
   - {property: checked, code: 'self.item[''enabled'']', writeback: true}
 - type: CheckBox
-  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '',
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: false, foreground: '',
     visible: true, text: '', font_size: null, font: '', spacing_above: small, spacing_below: small,
     italic: false, background: '', bold: false, checked: false, underline: false}
   name: check_box_email
   layout_properties: {column: VBCWPS}
   data_bindings:
   - {property: checked, code: 'self.item[''confirmed_email'']', writeback: true}
+  event_bindings: {change: check_box_email_change}

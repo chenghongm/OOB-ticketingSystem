@@ -20,6 +20,7 @@ class Order(OrderTemplate):
     app_tables.hold_order.delete_all_rows()
     self.repeating_panel_2.items = app_tables.hold_order.search()
     
+    
   def radio_button_2_clicked(self, **event_args):
     """This method is called when this radio button is selected"""
     pass
@@ -48,6 +49,7 @@ class Order(OrderTemplate):
        trip = item[0]
        uID = userID
        orderID = anvil.server.call('gen_orderID',userID)
+       print(orderID)
        app_tables.order_tmp2.add_row(OrderID=orderID,Trip=trip,UserID=uID)
     
     open_form('placeorder')
@@ -75,6 +77,8 @@ class Order(OrderTemplate):
       pagestack.pageL.pop()
     print(len(pagestack.pageL))
     
+    
+    
   def label_status_show(self, **event_args):
     """This method is called when the Label is shown on the screen"""
     user = anvil.users.get_user()
@@ -97,6 +101,8 @@ class Order(OrderTemplate):
     print(pagestack.pageL)
     form = pagestack.pageL[len(pagestack.pageL)-1]
     open_form(form)
+
+  
 
   
  

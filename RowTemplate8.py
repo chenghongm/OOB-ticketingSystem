@@ -41,16 +41,24 @@ class RowTemplate8(RowTemplate8Template):
     row = app_tables.order.get(OrderID=self.label_1.text)
     ticket = str(row['OrderID']+row['Passenger']+row['Trip']+row['UserID'])
     media = anvil.server.call('make_qr_code', ticket)
+    user =anvil.users.get_user()
+    to_adr = user['email']
+    anvil.server.call('sendTicket',media,to_adr)
     
-    alert(Image(source=media,spacing_above=10,spacing_below=10))
-    
+    alert(Image(source=media,spacing_above=10,spacing_below=10),title='Ticket')
+    download(media)
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     user = anvil.users.get_user()
     to = user['email']
-    anvil.server.call('refundEmail',to)
-    alert('You will get partial refund, please check your email!')
+    choice = confirm('Are you going to cancel this ticket?',buttons=[('Yes','Yes'),('No','No')])
+    if choice == 'Yes':
+      self.button_1.enabled = False
+      self.button_2.enabled  = False
+      anvil.server.call('refundEmail',to)
+      alert('You will get partial refund, please check your email!')
+         
     
     
 

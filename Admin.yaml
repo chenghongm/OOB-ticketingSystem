@@ -50,13 +50,13 @@ components:
   properties:
     role: null
     columns:
-    - {width: '250', title: From, id: NTNNVG, data_key: ''}
-    - {width: '250', title: To, id: WYZPRS, data_key: ''}
+    - {width: '200', title: From, id: NTNNVG, data_key: ''}
+    - {width: '200', title: To, id: WYZPRS, data_key: ''}
     - {width: '100', title: Subject, id: NCEMFA, data_key: ''}
     - {width: '200', title: Content, id: CJUQOK, data_key: ''}
     - {width: '150', title: When, id: HTMNSK, data_key: ''}
     - {width: '75', title: Replied, id: SYCFYV, data_key: ''}
-    - {width: '100', title: '', id: FTIJZW, data_key: ''}
+    - {width: '150', title: Comment, id: FTIJZW, data_key: ''}
     auto_header: true
     tooltip: ''
     border: ''
